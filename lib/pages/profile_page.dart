@@ -1,6 +1,6 @@
 import 'package:dram/models/select_image.dart';
 import 'package:dram/widgets/custom_button.dart';
-import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
+//import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -217,9 +217,9 @@ class _ProfileState extends State<Profile> {
                     ),
                     suffixIcon: IconButton(
                       onPressed: () {
-                        setState(() {
-                          _emojiShowing = !_emojiShowing;
-                        });
+                        // setState(() {
+                        //   _emojiShowing = !_emojiShowing;
+                        // });
                       },
                       icon: const Icon(
                         Icons.emoji_emotions_outlined, //emoji_emotions
@@ -234,30 +234,30 @@ class _ProfileState extends State<Profile> {
             // const SizedBox(
             //   height: 230,
             // ),
-            Offstage(
-              offstage: !_emojiShowing,
-              child: EmojiPicker(
-                textEditingController: _controller,
-                scrollController: _scrollController,
-                config: Config(
-                  height: 256,
-                  checkPlatformCompatibility: true,
-                  emojiViewConfig: EmojiViewConfig(
-                    // Issue: https://github.com/flutter/flutter/issues/28894
-                    emojiSizeMax: 28 *
-                        (foundation.defaultTargetPlatform ==
-                                TargetPlatform.android
-                            ? 1.2
-                            : 1.0),
-                  ),
-                  swapCategoryAndBottomBar: false,
-                  skinToneConfig: const SkinToneConfig(),
-                  categoryViewConfig: const CategoryViewConfig(),
-                  bottomActionBarConfig: const BottomActionBarConfig(),
-                  searchViewConfig: const SearchViewConfig(),
-                ),
-              ),
-            ),
+            // Offstage(
+            //   offstage: !_emojiShowing,
+            //   child: EmojiPicker(
+            //     textEditingController: _controller,
+            //     scrollController: _scrollController,
+            //     config: Config(
+            //       height: 256,
+            //       checkPlatformCompatibility: true,
+            //       emojiViewConfig: EmojiViewConfig(
+            //         // Issue: https://github.com/flutter/flutter/issues/28894
+            //         emojiSizeMax: 28 *
+            //             (foundation.defaultTargetPlatform ==
+            //                     TargetPlatform.android
+            //                 ? 1.2
+            //                 : 1.0),
+            //       ),
+            //       swapCategoryAndBottomBar: false,
+            //       skinToneConfig: const SkinToneConfig(),
+            //       categoryViewConfig: const CategoryViewConfig(),
+            //       bottomActionBarConfig: const BottomActionBarConfig(),
+            //       searchViewConfig: const SearchViewConfig(),
+            //     ),
+            //   ),
+            // ),
             const Spacer(
               flex: 4,
             ),
